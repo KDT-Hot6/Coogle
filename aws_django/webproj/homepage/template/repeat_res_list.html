@@ -1,0 +1,505 @@
+{% for res_info in res_list %}
+        <div id="cards-box" class="card-columns">
+
+            <!-- 1번째 카드 -->
+            <div class="card">
+                <div class="card-body">
+                    <!-- 식당이름 -->
+                    <div class="res_name"><span class='badge'>{{ res_info.0.res_number }}</span>
+                        {{res_info.0.res_name}}</div>
+
+                    <!-- 식당주소 -->
+                    <p class="res_address"><i class="fas fa-map-marker-alt"></i> {% autoescape off %}
+                        {{res_info.0.res_addr }}{% endautoescape %}</p>
+
+                    <!-- 태그 -->
+                    <p class="keytag">
+                        <i class="fas fa-tags"></i>
+                        {% for tag in res_info.0.res_keywords %}
+                        #{{tag}}
+
+                        {% endfor %}
+                    </p>
+                    <hr />
+
+                    <!-- 최상위 리뷰 1개 -->
+                    <div class="review01">{{ res_info.0.res_comment.0 | strCut}}
+                        {% if res_info.0.res_comment.0|length > 25 %}
+                        {% autoescape off %}
+                        <button onclick="myFunction('{{ res_info.0.res_number | getButtonId:1 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endautoescape %}
+                        {% endif %}
+                    </div>
+
+
+                    <div id='{{ res_info.0.res_number | getButtonId:1 }}' class="w3-hide w3-container">
+                        <p>{{ res_info.0.res_comment.0 }}</p>
+                    </div>
+
+                    <!-- review2 -->
+                    {% if res_info.0.res_comment.1 %}
+                    <div class="review02">{{ res_info.0.res_comment.1 | strCut}}
+                        {% if res_info.0.res_comment.1|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.0.res_number | getButtonId:2 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.0.res_number | getButtonId:2 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.0.res_comment.1 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review3 -->
+                    {% if res_info.0.res_comment.2 %}
+                    <div class="review03">{{ res_info.0.res_comment.2 | strCut}}
+                        {% if res_info.0.res_comment.2|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.0.res_number | getButtonId:3 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.0.res_number | getButtonId:3 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.0.res_comment.2}}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review4 -->
+                    {% if res_info.0.res_comment.3 %}
+                    <div class="review04">{{ res_info.0.res_comment.3 | strCut}}
+                        {% if res_info.0.res_comment.3|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.0.res_number | getButtonId:4 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.0.res_number | getButtonId:4 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.0.res_comment.3}}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review5 -->
+                    {% if res_info.0.res_comment.4 %}
+                    <div class="review05">{{ res_info.0.res_comment.4 | strCut}}
+                        {% if res_info.0.res_comment.4|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.0.res_number | getButtonId:5 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.0.res_number | getButtonId:5 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.0.res_comment.4}}</p>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <!-- 3번째 카드 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="res_name"><span class='badge'>{{ res_info.2.res_number }}</span>
+                        {{ res_info.2.res_name}}</div>
+                    <p class="res_address"><i class="fas fa-map-marker-alt"></i> {% autoescape off %}
+                        {{res_info.2.res_addr }}{% endautoescape %}</p>
+                    <p class="keytag"><i class="fas fa-tags"></i>
+                        {% for tag in res_info.2.res_keywords %}
+                        #{{tag}}
+
+                        {% endfor %}
+                    </p>
+                    <hr />
+
+                    <!-- review1 -->
+                    <div class="review01">{{ res_info.2.res_comment.0 | strCut }}
+                        {% if res_info.2.res_comment.0|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.2.res_number | getButtonId:1 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.2.res_number | getButtonId:1 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.2.res_comment.0 }}</p>
+                    </div>
+
+                    <!-- review2 -->
+                    {% if res_info.2.res_comment.1 %}
+                    <div class="review02">{{ res_info.2.res_comment.1 | strCut }}
+                        {% if res_info.2.res_comment.1|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.2.res_number | getButtonId:2 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.2.res_number | getButtonId:2 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.2.res_comment.1 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review3 -->
+                    {% if res_info.2.res_comment.2 %}
+                    <div class="review03">{{ res_info.2.res_comment.2 | strCut }}
+                        {% if res_info.2.res_comment.2|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.2.res_number | getButtonId:3 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.2.res_number | getButtonId:3 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.2.res_comment.2 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review4 -->
+                    {% if res_info.2.res_comment.3 %}
+                    <div class="review04">{{ res_info.2.res_comment.3 | strCut }}
+                        {% if res_info.2.res_comment.3|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.2.res_number | getButtonId:4 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.2.res_number | getButtonId:4 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.2.res_comment.3 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review5 -->
+                    {% if res_info.2.res_comment.4 %}
+                    <div class="review05">{{ res_info.2.res_comment.4 | strCut }}
+                        {% if res_info.2.res_comment.4|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.2.res_number | getButtonId:5 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.2.res_number | getButtonId:5 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.2.res_comment.4 }}</p>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <!-- 5번 카드 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="res_name"><span class='badge'>{{ res_info.4.res_number }}</span>
+                        {{ res_info.4.res_name}}</div>
+                    <p class="res_address"><i class="fas fa-map-marker-alt"></i> {% autoescape off %}
+                        {{res_info.4.res_addr }}{% endautoescape %}</p>
+                    <p class="keytag"><i class="fas fa-tags"></i>
+                        {% for tag in res_info.4.res_keywords %}
+                        #{{tag}}
+
+                        {% endfor %}
+                    </p>
+                    <hr />
+
+                    <!-- review1 -->
+                    <div class="review01">{{ res_info.4.res_comment.0|strCut}}
+                        {% if res_info.4.res_comment.0|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.4.res_number | getButtonId:1 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.4.res_number | getButtonId:1 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.4.res_comment.0 }}</p>
+                    </div>
+
+
+                    <!-- review2 -->
+                    {% if res_info.4.res_comment.1 %}
+                    <div class="review02">{{ res_info.4.res_comment.1|strCut}}
+                        {% if res_info.4.res_comment.1|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.4.res_number | getButtonId:2 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.4.res_number | getButtonId:2 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.4.res_comment.1 }}</p>
+                    </div>
+                    {% endif %}
+
+
+                    <!-- review3 -->
+                    {% if res_info.4.res_comment.2 %}
+                    <div class="review03">{{ res_info.4.res_comment.2|strCut}}
+                        {% if res_info.4.res_comment.2|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.4.res_number | getButtonId:3 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.4.res_number | getButtonId:3 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.4.res_comment.2 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review4 -->
+                    {% if res_info.4.res_comment.3 %}
+                    <div class="review03">{{ res_info.4.res_comment.3|strCut}}
+                        {% if res_info.4.res_comment.3|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.4.res_number | getButtonId:4 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.4.res_number | getButtonId:4 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.4.res_comment.3 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review5 -->
+                    {% if res_info.4.res_comment.4 %}
+                    <div class="review03">{{ res_info.4.res_comment.4|strCut}}
+                        {% if res_info.4.res_comment.4|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.4.res_number | getButtonId:5 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.4.res_number | getButtonId:5 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.4.res_comment.4 }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- 2번 카드 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="res_name"><span class='badge'>{{ res_info.1.res_number }}</span>
+                        {{ res_info.1.res_name}}</div>
+                    <p class="res_address"><i class="fas fa-map-marker-alt"></i> {% autoescape off %}
+                        {{res_info.1.res_addr }}{% endautoescape %}</p>
+                    <p class="keytag"><i class="fas fa-tags"></i>
+                        {% for tag in res_info.1.res_keywords %}
+                        #{{tag}}
+
+                        {% endfor %}
+                    </p>
+                    <hr />
+
+                    <!-- review1 -->
+                    <div class="review01">{{ res_info.1.res_comment.0 | strCut}}
+                        {% if res_info.1.res_comment.0|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.1.res_number | getButtonId:1 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.1.res_number | getButtonId:1 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.1.res_comment.0 }}</p>
+                    </div>
+
+                    <!-- review2 -->
+                    {% if res_info.1.res_comment.1 %}
+                    <div class="review02">{{ res_info.1.res_comment.1 | strCut}}
+                        {% if res_info.1.res_comment.1|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.1.res_number | getButtonId:2 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.1.res_number | getButtonId:2 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.1.res_comment.1}}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review3 -->
+                    {% if res_info.1.res_comment.2 %}
+                    <div class="review03">{{ res_info.1.res_comment.2 | strCut}}
+                        {% if res_info.1.res_comment.2|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.1.res_number | getButtonId:3 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.1.res_number | getButtonId:3 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.1.res_comment.2 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review4 -->
+                    {% if res_info.1.res_comment.3 %}
+                    <div class="review03">{{ res_info.1.res_comment.3 | strCut}}
+                        {% if res_info.1.res_comment.3|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.1.res_number | getButtonId:4 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.1.res_number | getButtonId:4 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.1.res_comment.3 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review5 -->
+                    {% if res_info.1.res_comment.4 %}
+                    <div class="review03">{{ res_info.1.res_comment.4 | strCut}}
+                        {% if res_info.1.res_comment.4|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.1.res_number | getButtonId:5 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.1.res_number | getButtonId:5 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.1.res_comment.4 }}</p>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+            <!-- 4번 카드 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="res_name"><span class='badge'>{{ res_info.3.res_number }}</span>
+                        {{ res_info.3.res_name}}</div>
+                    <p class="res_address"><i class="fas fa-map-marker-alt"></i> {% autoescape off %}
+                        {{res_info.3.res_addr }}{% endautoescape %}</p>
+                    <p class="keytag"><i class="fas fa-tags"></i>
+                        {% for tag in res_info.3.res_keywords %}
+                        #{{tag}}
+
+                        {% endfor %}
+                    </p>
+                    <hr />
+
+                    <!-- review1 -->
+                    <div class="review01">{{ res_info.3.res_comment.0 | strCut}}
+                        {% if res_info.3.res_comment.0|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.3.res_number | getButtonId:1 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.3.res_number | getButtonId:1 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.3.res_comment.0 }}</p>
+                    </div>
+
+                    <!-- review2 -->
+                    {% if res_info.3.res_comment.1 %}
+                    <div class="review02">{{ res_info.3.res_comment.1 | strCut}}
+                        {% if res_info.3.res_comment.1|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.3.res_number | getButtonId:2 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.3.res_number | getButtonId:2 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.3.res_comment.1 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review3 -->
+                    {% if res_info.3.res_comment.2 %}
+                    <div class="review03">{{ res_info.3.res_comment.2 | strCut}}
+                        {% if res_info.3.res_comment.2|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.3.res_number | getButtonId:3 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.3.res_number | getButtonId:3 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.3.res_comment.2 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review4 -->
+                    {% if res_info.3.res_comment.3 %}
+                    <div class="review03">{{ res_info.3.res_comment.3 | strCut}}
+                        {% if res_info.3.res_comment.3|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.3.res_number | getButtonId:4 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.3.res_number | getButtonId:4 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.3.res_comment.3 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review5 -->
+                    {% if res_info.3.res_comment.4 %}
+                    <div class="review03">{{ res_info.3.res_comment.4 | strCut}}
+                        {% if res_info.3.res_comment.4|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.3.res_number | getButtonId:5 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.3.res_number | getButtonId:5 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.3.res_comment.4 }}</p>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+            <!-- 6번 카드 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="res_name"><span class='badge'>{{ res_info.5.res_number }}</span>
+                        {{ res_info.5.res_name}}</div>
+                    <p class="res_address"><i class="fas fa-map-marker-alt"></i> {% autoescape off %}
+                        {{res_info.5.res_addr }}{% endautoescape %}</p>
+                    <p class="keytag"><i class="fas fa-tags"></i>
+                        {% for tag in res_info.5.res_keywords %}
+                        #{{tag}}
+
+                        {% endfor %}
+                    </p>
+                    <hr />
+
+                    <!-- review1 -->
+                    <div class="review01">{{ res_info.5.res_comment.0 | strCut}}
+                        {% if res_info.5.res_comment.0|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.5.res_number | getButtonId:1 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.5.res_number | getButtonId:1 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.5.res_comment.0 }}</p>
+                    </div>
+
+                    <!-- review2 -->
+                    {% if res_info.5.res_comment.1 %}
+                    <div class="review02">{{ res_info.5.res_comment.1 | strCut}}
+                        {% if res_info.5.res_comment.1|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.5.res_number | getButtonId:2 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.5.res_number | getButtonId:2 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.5.res_comment.1 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review3 -->
+                    {% if res_info.5.res_comment.2 %}
+                    <div class="review03">{{ res_info.5.res_comment.2 | strCut}}
+                        {% if res_info.5.res_comment.2|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.5.res_number | getButtonId:3 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.5.res_number | getButtonId:3 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.5.res_comment.2 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review4 -->
+                    {% if res_info.5.res_comment.3 %}
+                    <div class="review03">{{ res_info.5.res_comment.3 | strCut}}
+                        {% if res_info.5.res_comment.3|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.5.res_number | getButtonId:4 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.5.res_number | getButtonId:4 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.5.res_comment.3 }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- review5 -->
+                    {% if res_info.5.res_comment.4 %}
+                    <div class="review03">{{ res_info.5.res_comment.4 | strCut}}
+                        {% if res_info.5.res_comment.4|length > 25 %}
+                        <button onclick="myFunction('{{ res_info.5.res_number | getButtonId:5 }}')"
+                            class="w3-button w3-white w3-white w3-left-align">...</button>
+                        {% endif %}
+                    </div>
+                    <div id="{{ res_info.5.res_number | getButtonId:5 }}" class="w3-hide w3-container">
+                        <p>{{ res_info.5.res_comment.4 }}</p>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- <html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="js/tmp.js" type="text/javascript"></script>
+    </head>
+    <body>
+        .column
+        .search
+        .search_bar
+            %input#searchOne{:type => 'checkbox'}
+            %label{:for => 'searchOne'}
+                %i.icon.ion-android-search
+                %i.last.icon.ion-android-close
+                %p #{'|'}
+            %input{:type => 'text',:placeholder => 'Search...'}
+    </body>
+</html> -->
+
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <script src="js/tmp.js" type="text/javascript"></script> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="…">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">    <!-- 왼쪽 상단 메뉴-->
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">  <!-- form 테두리 없애기 -->
+</head>
+<body>
+    <div class="menu">
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="https://imgur.com/download/GcHTJg2">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main body -->
+    <div class="jumbotron">
+        <!-- <form>
+            <div class='url' style="border-style: solid">
+
+            </div>
+            <br/><br/><br/>
+            <h1 class='url' style="border-style: solid">test</h1>
+            <fieldset style="border-style: solid">
+                <h1 style="border-style: solid">test2</h1>
+            </fieldset>
+        </form> -->
+        
+        <div class="icon-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+  </div>
+ 
+<form action="#" autocomplete="off">
+    <fieldset class="url">
+      <input id="url" type="text" name="url" required>
+      <!-- <input type="text"> -->
+      <!-- <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label> -->
+      <div class="after"></div>
+    </fieldset>
+    <fieldset class="enter">
+      <button>Search</button>
+    </fieldset>
+  </form>
+</body>
+</html>

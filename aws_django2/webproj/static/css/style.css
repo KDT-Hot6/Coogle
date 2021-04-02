@@ -1,0 +1,316 @@
+*{
+  margin:0;
+  padding:0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Initial menu */
+.menu {
+   background-color: #98e1eb;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMTJkYWY0IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwM2M1ZGIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjIyMSIvPjxzdG9wIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjQwOCIvPjxzdG9wIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjU0NCIvPjxzdG9wIHN0b3AtY29sb3I9IiNjM2U2ZWQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjc5NTk5OTk5OTk5OTk5OTkiLz48c3RvcCBzdG9wLWNvbG9yPSIjYzNlNmVkIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(18, 218, 244)),color-stop(0.221, rgb(3, 197, 219)),color-stop(0.408, rgb(239, 239, 239)),color-stop(0.544, rgb(239, 239, 239)),color-stop(0.796, rgb(195, 230, 237)),color-stop(1, rgb(195, 230, 237)));
+  /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(top,rgb(18, 218, 244) 0%,rgb(3, 197, 219) 22.1%,rgb(239, 239, 239) 40.8%,rgb(239, 239, 239) 54.4%,rgb(195, 230, 237) 79.6%,rgb(195, 230, 237) 100%);
+  /* IE10+ */
+  background-image: repeating-linear-gradient(to bottom,rgb(18, 218, 244) 0%,rgb(3, 197, 219) 22.1%,rgb(239, 239, 239) 40.8%,rgb(239, 239, 239) 54.4%,rgb(195, 230, 237) 79.6%,rgb(195, 230, 237) 100%);
+  background-image: -ms-repeating-linear-gradient(top,rgb(18, 218, 244) 0%,rgb(3, 197, 219) 22.1%,rgb(239, 239, 239) 40.8%,rgb(239, 239, 239) 54.4%,rgb(195, 230, 237) 79.6%,rgb(195, 230, 237) 100%);
+left: -285px;  /* start off behind the scenes */
+height: 100%;
+position: fixed;
+width: 285px;
+}
+
+.menu ul {
+border-top: 1px solid #636366;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.menu li {
+border-bottom: 1px solid #636366;
+/*font-family: 'Open Sans', sans-serif;*/
+line-height: 45px;
+padding-bottom: 3px;
+padding-left: 20px;
+padding-top: 3px;
+}
+
+.menu li a {
+color: RGBA(20, 73, 87, 1);
+font-size: 18px;
+letter-spacing: 15px;
+text-shadow: -2px 2px 10px #558ABB;
+text-transform: uppercase;
+}
+
+.menu li a:hover {
+text-decoration: none;
+}
+
+
+.icon-close {
+cursor: pointer;
+background-color: RGBA(55, 73, 87, 0.5);
+padding-left: 10px;
+padding-top: 10px;
+}
+
+.icon-menu {
+color: RGBA(55, 73, 87, 0.8);
+cursor: pointer;
+/*font-family: 'Open Sans', sans-serif;*/
+font-size: 24px;
+line-height: 24px;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.icon-menu i {
+margin-right: 5px;
+}
+
+body {
+position: relative;
+left: 0;
+margin: 0;
+overflow: hidden;
+/*display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+min-height: 700px;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+-webkit-box-align: start;
+    -ms-flex-align: start;
+        align-items: flex-start;*/
+}
+
+.jumbotron{
+background:#fff url('') no-repeat center;   /*이미지 링크 https://imgur.com/download/yqdtMRi */
+background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem 1rem !important;
+-webkit-background-size: cover;
+   -moz-background-size: cover;
+     -o-background-size: cover;
+        background-size: cover;
+}
+
+form {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+position: absolute;
+top: 50px;
+width: 100%;
+padding-top: 50px;
+}
+
+fieldset {
+position: relative;
+}
+
+.fa-search{
+position: relative;
+top: 0px;
+font-size: 20px !important;
+}
+
+.url{
+margin: 20px 50px;
+padding-left: 50px;
+-webkit-box-flex: 5;
+    -ms-flex-positive: 5;
+        flex-grow: 5;
+}
+
+.enter{
+margin: 20px 20px;
+-webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+}
+
+.button{
+  margin: 20px 20px;
+  -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+}
+
+label {
+position: absolute;
+top: -5px;
+letter-spacing: 10px;
+font-size: 20px;
+color: RGBA(55, 73, 87, 0.8);
+-webkit-transform-origin: left;
+    -ms-transform-origin: left;
+        transform-origin: left;
+-webkit-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+input:focus ~ label {
+color: RGBA(254, 253, 255, 1.00);
+}
+
+input:focus ~ label,
+input:valid ~ label {
+top: 0;
+letter-spacing: 5px;
+-webkit-transform: translate(0, -30px) scale(0.7, 0.7);
+    -ms-transform: translate(0, -30px) scale(0.7, 0.7);
+        transform: translate(0, -30px) scale(0.7, 0.7);
+
+}
+
+input {
+font-family: system-ui, Helvetica, Arial, sans-serif;
+font-size: 20px !important;
+width: 100%;
+border: none;
+margin-top: 0;
+background-color: transparent;
+}
+
+input:focus {
+outline: none;
+}
+
+.after {
+width: 100%;
+height: 2px;
+background: -webkit-gradient(linear, left top, right top, color-stop(50%, RGBA(254, 253, 255, 1.00)), color-stop(50%, transparent));
+background: -webkit-linear-gradient(left, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
+background: -o-linear-gradient(left, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
+background: linear-gradient(to right, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
+background-color: RGBA(55, 73, 87, 0.8);
+background-size: 200% 100%;
+background-position: 100% 0;
+-webkit-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+input:focus ~ .after {
+background-position: 0 0;
+}
+
+button {
+position: relative;
+width: 200px;
+height: 34px;
+font-size: 20px;
+font-family: system-ui, Helvetica, Arial, sans-serif;
+line-height: 1.5;
+margin-top: 20px;
+padding: 2px 10px;
+color: rgba(255, 255, 255, 0.6);
+background: white;
+border: none;
+border-radius: 15px;
+background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, transparent));
+background: -webkit-linear-gradient(left, white 50%, transparent 50%);
+background: -o-linear-gradient(left, white 50%, transparent 50%);
+background: linear-gradient(to right, white 50%, transparent 50%);
+background-color: RGBA(55, 73, 87, 0.8);
+background-size: 200% 100%;
+background-position: 100% 0;
+-webkit-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+button:before {
+position: absolute;
+font-family: system-ui, FontAwesome, Helvetica, Arial, sans-serif;;
+font-size: 20px;
+/* content: "\f00c";  버튼 위의 이상한 모양 */   
+letter-spacing: 3px;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+top: 2px;
+bottom: 2px;
+left: 2px;
+right: 2px;
+display: block;
+border-radius: 15px;
+/*color: white;*/
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+button:active,
+button:focus,
+button:hover {
+/* outline: none; */
+/* background-position: 0 0;
+color: white; */
+
+box-shadow:200px 0 0 0 rgba(0,0,0,0.5) inset;
+/*box-shadow 간단설명
+box-shadow : 200px 0 0 0 rgba(0,0,0,0.5) inset;
+200px 0 : 앞쪽의 2개의 숫자는 윗쪽에서 200px, 왼쪽에서 0만큼 띄우라는 뜻
+0 (3번째 숫자) : 번짐의 정도 임
+0 (4번째 숫자) : 펼처짐의 넓이 임
+rgba(0,0,0,0.5) : 색상값과 투명도 임
+inset : 원그림의 외부가 아니라 내부에서만 표현하라는 뜻
+
+출처: https://stories.tistory.com/176 */
+}
+
+@media (min-width: 1260px){
+.body{
+  background-size: 100%;
+}
+}
+
+@media (max-width: 590px){
+button{
+  width: 150px;
+  margin-left: -20px !important;
+}
+label{
+  letter-spacing: 7px;
+}
+}
+
+@media (max-width: 475px){
+form{
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+button{
+  float: right;
+  margin-right: 25px !important;
+}
+}
+
+@media (max-width: 315px){
+label{
+  letter-spacing: 5px;
+}
+}
+
+@media (max-width: 300px){
+label{
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+}
+
+
