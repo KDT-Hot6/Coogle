@@ -25,11 +25,11 @@ Coogle은 KoSentenceBERT를 이용한 문장 임딩 모델 및 fast-text 모델�
 
 ![arch2](https://user-images.githubusercontent.com/23492454/114344821-792a8d00-9b9b-11eb-91f5-b1899313e51c.png)
 
-전체적인 로직은 비슷하지만 aws\_django2에 있는 프로젝트는 문장 임딩을 사용하지 않고 단어 임베을 활용합니다. 
+전체적인 로직은 비슷하지만 aws\_django2에 있는 프로젝트는 문장 임베딩을 사용하지 않고 단어 임베딩을 활용합니다. 
 
-서비스의 로직은 다음 코드들의 비교를 통해 보실 수 있습니다.  
+서비스의 로직은 다음 코드들을 통해 비교해 보실 수 있습니다.  
 
-### Ver1. 문장 임베딩을 활용한 버
+### Ver1. 문장 임베딩을 활용한 로직
 
 {% embed url="https://github.com/KDT-Hot6/Coogle/blob/main/aws\_django/webproj/homepage/views.py" %}
 
@@ -37,7 +37,7 @@ Coogle은 KoSentenceBERT를 이용한 문장 임딩 모델 및 fast-text 모델�
 
 {% embed url="https://github.com/KDT-Hot6/final\_project/tree/main/model/training\_stsbenchmark\_skt\_kobert\_model\_-2021-03-28\_05-25-43\_best" %}
 
-### Ver2. 단어 임베딩을 활용한 버전
+### Ver2. 단어 임베딩을 활용한 로직
 
 {% embed url="https://github.com/KDT-Hot6/Coogle/blob/main/aws\_django2/webproj/homepage/views.py" %}
 
