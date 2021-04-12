@@ -37,7 +37,7 @@ Coogle은 KoSentenceBERT를 이용한 문장 임딩 모델 및 fast-text 모델�
 
 {% embed url="https://github.com/KDT-Hot6/final\_project/tree/main/model/training\_stsbenchmark\_skt\_kobert\_model\_-2021-03-28\_05-25-43\_best" %}
 
-### Ver2. 단어 임베딩을 활용한 버
+### Ver2. 단어 임베딩을 활용한 버전
 
 {% embed url="https://github.com/KDT-Hot6/Coogle/blob/main/aws\_django2/webproj/homepage/views.py" %}
 
