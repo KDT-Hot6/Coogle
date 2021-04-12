@@ -4,11 +4,11 @@
 
 ## Intro
 
-Coogle은 KoSentenceBERT를 이용한 문장 임딩 모델 및 fast-text 모델를 기반으로한 단어 임딩 모델을 이용한 사용자 맞춤형 검색 플랫폼을 제공합니다.  
+Coogle은 KoSentenceBERT를 이용한 문장 임베딩 모델 및 fast-text 모델을 기반으로한 단어 임베딩 모델을 활용해 사용자 맞춤형 검색 플랫폼을 제공합니다.  
 
 ![content](https://user-images.githubusercontent.com/23492454/114344794-6ca63480-9b9b-11eb-89e9-f86b187c63bd.png)
 
-사용자가 입력한 쿼리는 학습된 임더 혹은 주어진 단어들의 조합에서 나온 쿼리들에 의해 벡터로 변환됩니다.  
+사용자가 입력한 쿼리는 학습된 임베더 혹은 주어진 단어들의 조합에서 나온 쿼리들에 의해 벡터로 변환됩니다.  
 
 ## 서비스 화면 
 
