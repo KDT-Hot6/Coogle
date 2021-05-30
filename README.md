@@ -10,6 +10,10 @@ Coogle은 KoSentenceBERT를 이용한 문장 임베딩 모델 및 fast-text 모�
 
 사용자가 입력한 쿼리는 학습된 임베더 혹은 주어진 단어들의 조합에서 나온 쿼리들에 의해 벡터로 변환됩니다.  
 
+## Demo
+
+[![Coogle (Hot6)](https://img.youtube.com/vi/bPQyPWRO200/0.jpg)](https://youtu.be/bPQyPWRO200?t=0s)
+
 ## 서비스 화면 
 
 ![Coogle1](https://user-images.githubusercontent.com/23492454/114345053-f524d500-9b9b-11eb-9aec-3f8d53a7f825.png)
